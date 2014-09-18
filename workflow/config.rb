@@ -1,21 +1,21 @@
-SETTINGS_FILE = '~/.jira-search-issues-config.yml'
+CONFIG_FILE = '~/.jira-search-issues-config.yml'
 
 def config
-  filepath = File.expand_path SETTINGS_FILE
-  @settings ||= (
+  filepath = File.expand_path CONFIG_FILE
+  @config ||= (
     if File.exists?(filepath)
       YAML.load File.read(filepath)
     else
-      raise "You must create the #{SETTINGS_FILE} configuration file first!"
+      raise "You must create the #{CONFIG_FILE} configuration file first!"
     end
   )
 end
 
 def check_config!
-  mandatory_settings = [:username, :password, :query, :url]
-  found_settings = settings.keys.map(&:to_sym)
-  missing_settings = mandatory_settings - found_settings
-  if missing_settings.any?
-    raise "Missing #{missing_settings} in #{SETTINGS_FILE} configuration file!"
+  mandatory_items = [:username, :password, :query, :url]
+  found_items = config.keys.map(&:to_sym)
+  missing_items = mandatory_items - found_items
+  if missing_items.any?
+    raise "Missing #{missing_items} in #{CONFIG_FILE} configuration file!"
   end
 end
