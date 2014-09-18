@@ -1,0 +1,8 @@
+# Edit this file and move it to:
+# ~/.jira-search-issues-config.yml
+username: "REPLACE"
+password: "REPLACE"
+query: "REPLACE"
+url: 'https://REPLACE.atlassian.net'
+max_results: 10000
+cache_duration: 120
