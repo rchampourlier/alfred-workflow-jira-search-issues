@@ -3,3 +3,5 @@ top/bundle
 top/.bundle
 workflow/.bundle
 workflow/bundle
+/.bundle
+/bundle
