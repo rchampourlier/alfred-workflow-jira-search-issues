@@ -1,5 +1,22 @@
 # Edit this file and move it to:
 # ~/.jira-search-issues-config.yml
+
+# - username, password: credentials for the
+#   the user account that will perform the
+#   JIRA API requests
+# - query: the JQL query to use to find the
+#   issues to be presented in the workflow
+#   (for example 'project = "MyProject" ORDER
+#   BY updatedDate')
+# - url: the URL to your Atlassian JIRA instance
+# - max_results: the max number of results to 
+#   fetch
+# - cache_duration: how long to keep the fetched
+#   results in Alfred's cache before fetching
+#   again (since fetching takes some time, a
+#   greater value makes it faster to use after
+#   the first time, however you won't get the
+#   new issues until a new fetch)
 username: "REPLACE"
 password: "REPLACE"
 query: "REPLACE"
